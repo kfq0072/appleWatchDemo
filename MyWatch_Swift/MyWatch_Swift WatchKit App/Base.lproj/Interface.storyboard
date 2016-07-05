@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iRX-cy-j8H">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MyWatch_Swift_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="push" id="M8Z-SU-xet">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.81005300339999997" green="1" blue="0.29778597359999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="btnClick" destination="AgC-eL-Hgc" id="ZeX-a6-YL8"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="prest" id="cpA-k6-iAs">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="1" green="0.1181433606" blue="0.111154076" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="myPresentClick" destination="AgC-eL-Hgc" id="t9e-FD-5P3"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="myButton" destination="M8Z-SU-xet" id="uf3-V5-tby"/>
+                        <outlet property="presentBtn" destination="cpA-k6-iAs" id="7pI-kd-Q5Z"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--imageController-->
+        <scene sceneID="wxi-Oe-T5i">
+            <objects>
+                <controller identifier="imageController" id="gaQ-WZ-Va6">
+                    <items>
+                        <imageView height="103" alignment="left" image="de.png" id="iCl-bl-iKq"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="438" y="349"/>
+        </scene>
+        <!--switch-->
+        <scene sceneID="gHY-oZ-AJR">
+            <objects>
+                <controller identifier="switch" id="rDh-kR-gvJ" customClass="SwitchInterfaceController" customModule="MyWatch_Swift_WatchKit_Extension">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="qwd-B6-ZHu">
+                            <connections>
+                                <action selector="switchClick:" destination="rDh-kR-gvJ" id="cOI-St-RRj"/>
+                            </connections>
+                        </switch>
+                    </items>
+                    <connections>
+                        <outlet property="switchView" destination="qwd-B6-ZHu" id="vfZ-k5-2vb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="448" y="568"/>
+        </scene>
+        <!--Menus-->
+        <scene sceneID="fpR-S3-c7u">
+            <objects>
+                <controller identifier="Menus" id="eDq-82-bEq" customClass="MenuInterfaceController" customModule="MyWatch_Swift_WatchKit_Extension">
+                    <menu key="menu" id="mzQ-kr-MED">
+                        <items>
+                            <menuItem title="Accept" icon="accept" id="BQv-oD-zgM">
+                                <connections>
+                                    <action selector="menuClick" destination="eDq-82-bEq" id="LY8-fw-VgR"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Add" icon="add" id="PC9-nE-PRX"/>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="622" y="567"/>
+        </scene>
+        <!--movie-->
+        <scene sceneID="HO9-aR-TJc">
+            <objects>
+                <controller identifier="movie" id="Hcx-AV-Pqf" customClass="MovieInterfaceController" customModule="MyWatch_Swift_WatchKit_Extension">
+                    <items>
+                        <movie width="1" height="100" alignment="left" id="bHX-H5-BeC"/>
+                    </items>
+                    <connections>
+                        <outlet property="movie" destination="bHX-H5-BeC" id="o42-2h-fz0"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="794" y="567"/>
+        </scene>
+        <!--Alerts-->
+        <scene sceneID="bUh-ip-QkB">
+            <objects>
+                <controller identifier="Alerts" id="dMc-TQ-tH6" customClass="AlertsInterfaceController" customModule="MyWatch_Swift_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="AlertsClick" id="o7G-bi-CRW">
+                            <connections>
+                                <action selector="alertClick" destination="dMc-TQ-tH6" id="LGx-zy-aMj"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="sideAlertClick" id="NBD-ls-Qxj">
+                            <connections>
+                                <action selector="sideAlertClick" destination="dMc-TQ-tH6" id="WNs-KR-7OQ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="popClick" id="h9v-eC-Xt2">
+                            <connections>
+                                <action selector="popClick" destination="dMc-TQ-tH6" id="Jt8-h5-JBY"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="828" y="793"/>
+        </scene>
+        <!--Tables-->
+        <scene sceneID="eAP-fx-yW5">
+            <objects>
+                <controller identifier="Tables" id="O5E-be-RhW" customClass="TableInterfaceController" customModule="MyWatch_Swift_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="zea-BH-cTu">
+                            <items>
+                                <tableRow identifier="TableRowController" id="Ww8-eT-wiS" customClass="TableRowController" customModule="MyWatch_Swift_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="60.5" alignment="left" id="Wue-P0-761">
+                                        <items>
+                                            <group width="1" alignment="left" layout="vertical" id="9H6-5N-lF1">
+                                                <items>
+                                                    <label alignment="left" text="Label" id="imN-sZ-sQ6">
+                                                        <color key="textColor" red="0.64427425989999998" green="1" blue="0.29778597359999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="font" type="system" pointSize="25"/>
+                                                    </label>
+                                                    <label alignment="left" text="Label" id="Ulk-g5-WXg"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="bank" destination="imN-sZ-sQ6" id="Bp1-EQ-icQ"/>
+                                        <outlet property="menoy" destination="Ulk-g5-WXg" id="I6r-a4-ccm"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="Table" destination="zea-BH-cTu" id="9R3-mJ-m7B"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="967" y="568"/>
+        </scene>
+        <!--Pickers-->
+        <scene sceneID="vd0-Xx-1Rl">
+            <objects>
+                <controller identifier="Pickers" id="guZ-6e-dJc" customClass="PickerInterfaceController" customModule="MyWatch_Swift_WatchKit_Extension">
+                    <items>
+                        <picker height="100" alignment="left" id="EeO-zS-VWB"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="607" y="351"/>
+        </scene>
+        <!--Main Interface Controller-->
+        <scene sceneID="4Jd-qb-iNa">
+            <objects>
+                <controller id="iRX-cy-j8H" customClass="MainInterfaceController" customModule="MyWatch_Swift_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="vHc-E4-iay">
+                            <items>
+                                <tableRow identifier="MainRowController" id="fuA-pP-Vvh" customClass="MainRowController" customModule="MyWatch_Swift_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="VSj-b1-Z0s">
+                                        <items>
+                                            <group width="1" alignment="left" id="Q8X-mX-Ylm">
+                                                <items>
+                                                    <label width="135.5" height="34.5" alignment="left" text="Label" textAlignment="center" id="Vrh-XO-RJX"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="UITitle" destination="Vrh-XO-RJX" id="Wck-1A-OH8"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="MainTable" destination="vHc-E4-iay" id="0c8-yp-07d"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="73" y="484"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="MyWatch_Swift_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="MyWatch_Swift_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
